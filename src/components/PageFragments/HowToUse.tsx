@@ -23,11 +23,11 @@ const HowToUse = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-16 lg:pt-48 pb-36 px-6 lg:px-20">
+    <section className="w-full bg-white pt-16 pb-36 px-6 lg:px-20">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl poppins-medium text-[#2D2D2D] inline-block relative">
+          <h2 className="text-2xl md:text-3xl poppins-semibold text-[#2D2D2D] inline-block relative">
             How to use delivery{" "}
             <span className="relative inline-block">
               service

@@ -186,7 +186,7 @@ const Footer = () => {
               <br />
               Powered by{" "}
               <span className="text-zinc-900 font-medium tracking-wide">
-                Vertexem Infrastructure
+                {CompanyName} Infrastructure
               </span>
             </p>
           </div>

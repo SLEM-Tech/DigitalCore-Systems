@@ -117,7 +117,7 @@ const SpecialOffers = () => {
   return (
     <div className="w-full max-w-[1540px] px-6 lg:px-20 py-20">
       <div className="flex justify-between items-center px-4">
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl poppins-medium text-[#2D2D2D]">
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl poppins-semibold text-[#2D2D2D]">
           Special offers{" "}
           <span className="text-[#F58B3C] relative">
             for you

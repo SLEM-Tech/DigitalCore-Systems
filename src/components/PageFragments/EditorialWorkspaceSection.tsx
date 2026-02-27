@@ -52,7 +52,7 @@ const EditorialWorkspaceSection: React.FC = () => {
 
   return (
     <section className="w-full bg-[#F9F3E5]">
-      <div className="relative max-w-[1140px] mx-auto px-6 lg:px-20 py-12 lg:py-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="relative px-6 lg:px-20 py-12 lg:py-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Left Column: Text Content */}
         <div className="flex flex-col items-start">
           <span className="text-sm tracking-[0.3em] uppercase text-neutral-500 font-medium">

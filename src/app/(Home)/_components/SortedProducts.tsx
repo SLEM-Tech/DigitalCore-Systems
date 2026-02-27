@@ -121,7 +121,7 @@ const SortedProducts = () => {
   return (
     <section className="w-full flex flex-col items-center bg-[#F9F3E5] pb-32">
       <div className="w-full max-w-[1540px] px-6 lg:px-20 py-16 space-y-8">
-        <h2 className="text-2xl lg:text-3xl poppins-medium text-[#2D2D2D] mb-8 ml-4">
+        <h2 className="text-2xl lg:text-3xl poppins-semibold text-[#2D2D2D] mb-8 ml-4">
           Popular{" "}
           <span className="relative">
             Now
@@ -131,9 +131,9 @@ const SortedProducts = () => {
 
         <div className="relative min-h-[400px]">
           {/* Layered Background Container */}
-          <div className="bg-[#F9D9AA] w-full z-10 h-80 rounded-[30px] px-8 lg:px-16 py-16 lg:py-24 shadow-sm absolute -bottom-36 hidden lg:block"></div>
+          <div className="bg-[#F9D9AA] w-full z-20 h-80 rounded-[30px] px-8 lg:px-16 py-16 lg:py-24 shadow-sm absolute -bottom-36 hidden lg:block"></div>
 
-          <div className="relative z-20 w-[95%] lg:w-[90%] mt-16 mx-auto">
+          <div className="relative z-30 w-[95%] lg:w-[90%] mt-16 mx-auto">
             {isLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (

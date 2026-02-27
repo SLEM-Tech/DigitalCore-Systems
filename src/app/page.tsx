@@ -29,11 +29,12 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <AppLayout className=" mt-32 lg:mt-0">
-      <div className="bg-[#F9F3E5] h-auto lg:h-[1280px]">
+      <div className="bg-[#F9F3E5] h-auto relative">
         <AllCategorySection />
         <div className="mx-auto lg:pl-2 mt-4">
           <SortedProducts />
         </div>
+        <div className="absolute bottom-0 h-40 w-full bg-white z-10"></div>
       </div>
       <HowToUse />
       <AboutUs />
