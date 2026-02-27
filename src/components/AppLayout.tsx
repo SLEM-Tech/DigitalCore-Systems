@@ -13,7 +13,7 @@ const AppLayout = ({ children, className }: AppLayoutProps) => {
 			<Header />
 			<div className={`min-h-screen ${className} mt-0`}>{children}</div>
 			<Footer />
-			<div className='mt-20 sm:mt-0' />
+			{/* <div className='mt-20 sm:mt-0' /> */}
 		</main>
 	);
 };

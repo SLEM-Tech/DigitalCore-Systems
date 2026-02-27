@@ -9,6 +9,7 @@ import HowToUse from "@src/components/PageFragments/HowToUse";
 import SpecialOffers from "@src/components/PageFragments/SpecialOffers";
 import AboutUs from "@src/components/PageFragments/AboutUs";
 import NewsletterSection from "@src/components/PageFragments/NewsletterSection";
+import EditorialWorkspaceSection from "@src/components/PageFragments/EditorialWorkspaceSection";
 
 const { description, title, ogImage, keywords } = SEODATA.home;
 export const metadata: Metadata = {
@@ -37,7 +38,8 @@ const page = () => {
       <HowToUse />
       <AboutUs />
       <SpecialOffers />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
+      <EditorialWorkspaceSection />
       <div className="pt-4 px-2 sm:px-0 mx-auto max-w-[1256px] mt-6">
         <div className="sm:mt-3">
           <section className="flex w-full flex-col items-center pt-5 lg:pt-16 text-center">
