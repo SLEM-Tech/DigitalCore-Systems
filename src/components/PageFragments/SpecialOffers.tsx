@@ -71,7 +71,7 @@ const ProductCardCompact = ({
 
         <div className="flex justify-between items-center mt-4">
           <p className="text-[#F58B3C] poppins-semibold text-lg lg:text-xl">
-            ₦{price ? price.toLocaleString() : ""}
+            {price ? `₦${price.toLocaleString()}` : "N/A"}
           </p>
 
           <button
