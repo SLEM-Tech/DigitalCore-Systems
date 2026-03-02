@@ -45,6 +45,7 @@ import { FaCartArrowDown, FaShoppingBag } from "react-icons/fa";
 import { BiUser } from "react-icons/bi";
 import { ImSpinner2 } from "react-icons/im";
 import Link from "@node_modules/next/link";
+import { logoImage } from "@public/images";
 
 const Header = () => {
   const pathname = usePathname();
@@ -118,13 +119,16 @@ const Header = () => {
         {/* Main Desktop Header */}
         <div className="hidden slg:flex items-center justify-between w-full py-4 max-w-[1440px] px-16 mx-auto gap-4">
           {/* 1. Logo Section */}
-          <div className="flex items-center shrink-0">
-            {/* <Link
-              href="/"
-              className="text-[28px] font-black uppercase tracking-tight text-[#E68A45]"
-            >
-              LOGO
-            </Link> */}
+          <div className="shrink-0">
+            <Link href="/">
+              <Picture
+                src={logoImage}
+                alt="logo"
+                priority
+                loading="lazy"
+                className={`w-48 duration-300 hover:scale-105 transition-[.3] hover:animate-pulse`}
+              />
+            </Link>
           </div>
 
           {/* 2. Navigation Section */}
@@ -249,9 +253,17 @@ const Header = () => {
               >
                 <FiMenu className="text-2xl text-black" />
               </button>
-              {/* <span className="text-2xl font-black tracking-tight text-[#E68A45]">
-                LOGO
-              </span> */}
+              <div className="shrink-0">
+                <Link href="/">
+                  <Picture
+                    src={logoImage}
+                    alt="logo"
+                    priority
+                    loading="lazy"
+                    className={`w-32 duration-300 hover:scale-105 transition-[.3] hover:animate-pulse`}
+                  />
+                </Link>
+              </div>
             </div>
             <div
               onClick={onOpenCart}
