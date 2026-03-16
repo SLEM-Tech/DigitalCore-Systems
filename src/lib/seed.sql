@@ -6,7 +6,7 @@
 -- ── Categories ───────────────────────────────────────────────
 
 -- 5 Main categories (no sub-categories)
-INSERT INTO softtrova_categories (name, slug, description, parent_id, image_url, count) VALUES
+INSERT INTO digitalCore_categories (name, slug, description, parent_id, image_url, count) VALUES
   ('Computers & Laptops',        'computers-laptops',        'Gaming laptops, business notebooks, desktops and all-in-ones', NULL, 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400', 0),
   ('Software & Licenses',        'software-licenses',        'Operating systems, productivity apps, security and creative tools', NULL, 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400', 0),
   ('PC Components & Hardware',   'pc-components-hardware',   'CPUs, GPUs, motherboards, RAM, cooling and power supplies', NULL, 'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400', 0),
@@ -18,7 +18,7 @@ ON CONFLICT (slug) DO NOTHING;
 -- CATEGORY 1: COMPUTERS & LAPTOPS (17 products)
 -- ══════════════════════════════════════════════════════════════
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'ASUS ROG Strix Scar 18 Gaming Laptop',
   'asus-rog-strix-scar-18',
@@ -28,7 +28,7 @@ VALUES (
   3250000, 3500000, 3250000, 'instock', 4, 24, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'MSI Raider GE78 HX Gaming Laptop',
   'msi-raider-ge78-hx',
@@ -38,7 +38,7 @@ VALUES (
   2450000, 2650000, 2450000, 'instock', 6, 28, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Lenovo Legion Pro 5i Gen 9',
   'lenovo-legion-pro-5i-gen9',
@@ -48,7 +48,7 @@ VALUES (
   1850000, 2000000, 1850000, 'instock', 10, 32, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Acer Nitro 16 Gaming Laptop',
   'acer-nitro-16',
@@ -58,7 +58,7 @@ VALUES (
   1150000, 1250000, 1150000, 'instock', 15, 38, 4.70, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Dell Precision 5680 Mobile Workstation',
   'dell-precision-5680',
@@ -68,7 +68,7 @@ VALUES (
   2850000, 3100000, 2850000, 'instock', 5, 18, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'HP ZBook Fury 16 G10 Workstation',
   'hp-zbook-fury-16-g10',
@@ -78,7 +78,7 @@ VALUES (
   2950000, 3200000, 2950000, 'instock', 4, 16, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Lenovo ThinkPad X1 Carbon Gen 12',
   'lenovo-thinkpad-x1-carbon-gen12',
@@ -88,7 +88,7 @@ VALUES (
   1550000, 1700000, 1550000, 'instock', 12, 42, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'ASUS Zenbook 14 OLED',
   'asus-zenbook-14-oled',
@@ -98,7 +98,7 @@ VALUES (
   1185000, 1300000, 1185000, 'instock', 18, 38, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Microsoft Surface Laptop Studio 2',
   'microsoft-surface-laptop-studio-2',
@@ -108,7 +108,7 @@ VALUES (
   2150000, 2350000, 2150000, 'instock', 8, 26, 4.70, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'NZXT Player: Three Streaming PC',
   'nzxt-player-three-streaming',
@@ -118,7 +118,7 @@ VALUES (
   2150000, 2350000, 2150000, 'instock', 8, 32, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'iBUYPOWER Element MR Gaming Desktop',
   'ibuypower-element-mr',
@@ -128,7 +128,7 @@ VALUES (
   1350000, 1480000, 1350000, 'instock', 12, 42, 4.70, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Corsair Vengeance i7500 Gaming PC',
   'corsair-vengeance-i7500',
@@ -138,7 +138,7 @@ VALUES (
   2450000, 2650000, 2450000, 'instock', 6, 28, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Dell OptiPlex 7020 Tower Desktop',
   'dell-optiplex-7020-tower',
@@ -148,7 +148,7 @@ VALUES (
   720000, 800000, 720000, 'instock', 20, 38, 4.65, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Apple Mac Mini M2 Pro',
   'apple-mac-mini-m2-pro',
@@ -158,7 +158,7 @@ VALUES (
   1185000, 1300000, 1185000, 'instock', 10, 32, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'HP All-in-One 27-cr0000 Desktop',
   'hp-aio-27-cr0000',
@@ -168,7 +168,7 @@ VALUES (
   920000, 1020000, 920000, 'instock', 15, 28, 4.60, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'GEEKOM Mini IT13 Mini PC',
   'geekom-mini-it13',
@@ -178,7 +178,7 @@ VALUES (
   820000, 920000, 820000, 'instock', 12, 35, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Beelink SER7 Mini PC',
   'beelink-ser7',
@@ -192,7 +192,7 @@ VALUES (
 -- CATEGORY 2: SOFTWARE & LICENSES (17 products)
 -- ══════════════════════════════════════════════════════════════
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Microsoft Windows 11 Professional (Digital)',
   'windows-11-pro-digital',
@@ -202,7 +202,7 @@ VALUES (
   88000, 98000, 88000, 'instock', 500, 125, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Microsoft Windows 11 Home (Digital License)',
   'windows-11-home-digital',
@@ -212,7 +212,7 @@ VALUES (
   59000, 68000, 59000, 'instock', 500, 98, 4.70, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Microsoft 365 Personal (12-Month Subscription)',
   'microsoft-365-personal-12mo',
@@ -222,7 +222,7 @@ VALUES (
   32000, 38000, 32000, 'instock', 300, 88, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Microsoft Office 2024 Home & Business (Perpetual)',
   'office-2024-home-business',
@@ -232,7 +232,7 @@ VALUES (
   135000, 152000, 135000, 'instock', 200, 72, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Adobe Creative Cloud All Apps (Annual Prepaid)',
   'adobe-cc-all-apps-annual',
@@ -242,7 +242,7 @@ VALUES (
   295000, 330000, 295000, 'instock', 150, 68, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Adobe Photoshop (Annual Subscription)',
   'adobe-photoshop-annual',
@@ -252,7 +252,7 @@ VALUES (
   118000, 135000, 118000, 'instock', 200, 92, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'CorelDRAW Graphics Suite 2024 (Perpetual)',
   'coreldraw-2024-perpetual',
@@ -262,7 +262,7 @@ VALUES (
   225000, 255000, 225000, 'instock', 100, 48, 4.70, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Affinity Designer 2 (Perpetual License)',
   'affinity-designer-2',
@@ -272,7 +272,7 @@ VALUES (
   42000, 48000, 42000, 'instock', 180, 62, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Norton 360 Premium (12-Month, 10 Devices)',
   'norton-360-premium-12mo',
@@ -282,7 +282,7 @@ VALUES (
   38000, 45000, 38000, 'instock', 400, 105, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Kaspersky Total Security (12-Month, 5 Devices)',
   'kaspersky-total-security-12mo',
@@ -292,7 +292,7 @@ VALUES (
   35000, 42000, 35000, 'instock', 350, 95, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'JetBrains IntelliJ IDEA Ultimate (Annual)',
   'jetbrains-intellij-ultimate-annual',
@@ -302,7 +302,7 @@ VALUES (
   95000, 108000, 95000, 'instock', 150, 58, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'GitHub Copilot Individual (Annual Prepaid)',
   'github-copilot-individual-annual',
@@ -312,7 +312,7 @@ VALUES (
   58000, 65000, 58000, 'instock', 250, 98, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'VMware Workstation Pro 17 (Perpetual)',
   'vmware-workstation-pro-17',
@@ -322,7 +322,7 @@ VALUES (
   185000, 210000, 185000, 'instock', 120, 52, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Acronis True Image 2024 (1-Year, 5 Devices)',
   'acronis-true-image-2024',
@@ -332,7 +332,7 @@ VALUES (
   68000, 78000, 68000, 'instock', 200, 72, 4.70, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Grammarly Premium (Annual Subscription)',
   'grammarly-premium-annual',
@@ -342,7 +342,7 @@ VALUES (
   52000, 60000, 52000, 'instock', 250, 85, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Tableau Desktop Professional (Annual)',
   'tableau-desktop-professional-annual',
@@ -352,7 +352,7 @@ VALUES (
   485000, 540000, 485000, 'instock', 80, 42, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Autodesk AutoCAD 2025 (Annual Subscription)',
   'autocad-2025-annual',
@@ -366,7 +366,7 @@ VALUES (
 -- CATEGORY 3: PC COMPONENTS & HARDWARE (17 products)
 -- ══════════════════════════════════════════════════════════════
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Intel Core i9-14900KS Processor',
   'intel-core-i9-14900ks',
@@ -376,7 +376,7 @@ VALUES (
   520000, 580000, 520000, 'instock', 12, 38, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'AMD Ryzen 9 7950X Processor',
   'amd-ryzen-9-7950x',
@@ -386,7 +386,7 @@ VALUES (
   485000, 540000, 485000, 'instock', 15, 52, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Intel Core i5-14600KF Processor',
   'intel-core-i5-14600kf',
@@ -396,7 +396,7 @@ VALUES (
   235000, 265000, 235000, 'instock', 40, 68, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'NVIDIA GeForce RTX 4090 24GB (MSI Suprim X)',
   'nvidia-rtx-4090-msi-suprim',
@@ -406,7 +406,7 @@ VALUES (
   1950000, 2150000, 1950000, 'instock', 5, 32, 4.95, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'AMD Radeon RX 7900 XT 20GB (Gigabyte Gaming OC)',
   'amd-rx-7900-xt-gigabyte',
@@ -416,7 +416,7 @@ VALUES (
   820000, 920000, 820000, 'instock', 10, 42, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'NVIDIA GeForce RTX 4060 Ti 16GB (ASUS TUF)',
   'nvidia-rtx-4060-ti-16gb-asus',
@@ -426,7 +426,7 @@ VALUES (
   485000, 540000, 485000, 'instock', 18, 58, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'MSI MPG Z790 Carbon WiFi Motherboard',
   'msi-mpg-z790-carbon-wifi',
@@ -436,7 +436,7 @@ VALUES (
   398000, 445000, 398000, 'instock', 15, 48, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'ASUS ROG Strix X670E-E Gaming WiFi',
   'asus-rog-strix-x670e-e',
@@ -446,7 +446,7 @@ VALUES (
   485000, 540000, 485000, 'instock', 12, 42, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Corsair Dominator Titanium 64GB DDR5-6400 CL32',
   'corsair-dominator-titanium-64gb',
@@ -456,7 +456,7 @@ VALUES (
   320000, 360000, 320000, 'instock', 25, 38, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'G.Skill Flare X5 32GB DDR5-6000 CL36',
   'gskill-flare-x5-32gb-6000',
@@ -466,7 +466,7 @@ VALUES (
   138000, 155000, 138000, 'instock', 45, 62, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'be quiet! Dark Rock Elite CPU Cooler',
   'be-quiet-dark-rock-elite',
@@ -476,7 +476,7 @@ VALUES (
   118000, 135000, 118000, 'instock', 20, 58, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'NZXT Kraken Elite 360mm RGB AIO',
   'nzxt-kraken-elite-360',
@@ -486,7 +486,7 @@ VALUES (
   238000, 270000, 238000, 'instock', 18, 48, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Deepcool AK620 CPU Air Cooler',
   'deepcool-ak620',
@@ -496,7 +496,7 @@ VALUES (
   38000, 45000, 38000, 'instock', 50, 85, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Seasonic VERTEX GX-1000 1000W 80+ Gold',
   'seasonic-vertex-gx-1000',
@@ -506,7 +506,7 @@ VALUES (
   188000, 210000, 188000, 'instock', 25, 52, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Corsair HX1500i 1500W 80+ Platinum',
   'corsair-hx1500i',
@@ -516,7 +516,7 @@ VALUES (
   285000, 320000, 285000, 'instock', 15, 38, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Thermaltake Toughpower GF3 850W 80+ Gold',
   'thermaltake-toughpower-gf3-850',
@@ -530,7 +530,7 @@ VALUES (
 -- CATEGORY 4: PERIPHERALS & ACCESSORIES (17 products)
 -- ══════════════════════════════════════════════════════════════
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Logitech G Pro X TKL Rapid Gaming Keyboard',
   'logitech-g-pro-x-tkl-rapid',
@@ -540,7 +540,7 @@ VALUES (
   168000, 188000, 168000, 'instock', 20, 58, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Keychron V6 Full-Size Mechanical Keyboard',
   'keychron-v6-fullsize',
@@ -550,7 +550,7 @@ VALUES (
   98000, 115000, 98000, 'instock', 30, 72, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Corsair K70 RGB PRO Mechanical Gaming Keyboard',
   'corsair-k70-rgb-pro',
@@ -560,7 +560,7 @@ VALUES (
   148000, 168000, 148000, 'instock', 25, 68, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Razer DeathAdder V3 Pro Wireless Gaming Mouse',
   'razer-deathadder-v3-pro',
@@ -570,7 +570,7 @@ VALUES (
   135000, 152000, 135000, 'instock', 30, 88, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Logitech G502 X Plus Wireless Gaming Mouse',
   'logitech-g502-x-plus',
@@ -580,7 +580,7 @@ VALUES (
   148000, 168000, 148000, 'instock', 28, 78, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Logitech MX Keys S Wireless Keyboard',
   'logitech-mx-keys-s-wireless',
@@ -590,7 +590,7 @@ VALUES (
   128000, 145000, 128000, 'instock', 35, 95, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Dell UltraSharp U2724DE 27" QHD Monitor',
   'dell-ultrasharp-u2724de',
@@ -600,7 +600,7 @@ VALUES (
   420000, 470000, 420000, 'instock', 18, 68, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'LG 27GN950-B 27" 4K 144Hz Gaming Monitor',
   'lg-27gn950-b',
@@ -610,7 +610,7 @@ VALUES (
   585000, 650000, 585000, 'instock', 12, 52, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Samsung Odyssey Neo G7 32" 4K Curved Gaming',
   'samsung-odyssey-neo-g7-32',
@@ -620,7 +620,7 @@ VALUES (
   1050000, 1150000, 1050000, 'instock', 8, 42, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'BenQ PD2706UA 27" 4K Designer Monitor',
   'benq-pd2706ua',
@@ -630,7 +630,7 @@ VALUES (
   520000, 580000, 520000, 'instock', 15, 48, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'SteelSeries Arctis Nova 7 Wireless Gaming Headset',
   'steelseries-arctis-nova-7-wireless',
@@ -640,7 +640,7 @@ VALUES (
   185000, 210000, 185000, 'instock', 22, 78, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Razer Kraken V3 Pro Wireless Gaming Headset',
   'razer-kraken-v3-pro-wireless',
@@ -650,7 +650,7 @@ VALUES (
   198000, 220000, 198000, 'instock', 20, 68, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Elgato Stream Deck +',
   'elgato-stream-deck-plus',
@@ -660,7 +660,7 @@ VALUES (
   198000, 220000, 198000, 'instock', 18, 58, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Razer Kiyo Pro Ultra 4K Webcam',
   'razer-kiyo-pro-ultra-webcam',
@@ -670,7 +670,7 @@ VALUES (
   248000, 280000, 248000, 'instock', 15, 48, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Blue Yeti X Professional USB Microphone',
   'blue-yeti-x-usb-mic',
@@ -680,7 +680,7 @@ VALUES (
   152000, 170000, 152000, 'instock', 25, 88, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Wacom Cintiq 22 Drawing Tablet',
   'wacom-cintiq-22',
@@ -694,7 +694,7 @@ VALUES (
 -- CATEGORY 5: NETWORKING & STORAGE (17 products)
 -- ══════════════════════════════════════════════════════════════
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Samsung 990 EVO Plus 2TB NVMe SSD',
   'samsung-990-evo-plus-2tb',
@@ -704,7 +704,7 @@ VALUES (
   198000, 220000, 198000, 'instock', 40, 72, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'WD Black SN850X 4TB NVMe SSD',
   'wd-black-sn850x-4tb',
@@ -714,7 +714,7 @@ VALUES (
   385000, 430000, 385000, 'instock', 25, 58, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Crucial P5 Plus 2TB NVMe PCIe 4.0 SSD',
   'crucial-p5-plus-2tb',
@@ -724,7 +724,7 @@ VALUES (
   168000, 188000, 168000, 'instock', 50, 85, 4.70, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Samsung 870 QVO 4TB 2.5" SATA SSD',
   'samsung-870-qvo-4tb',
@@ -734,7 +734,7 @@ VALUES (
   268000, 300000, 268000, 'instock', 35, 68, 4.65, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'SanDisk Extreme PRO Portable SSD 2TB',
   'sandisk-extreme-pro-portable-2tb',
@@ -744,7 +744,7 @@ VALUES (
   248000, 280000, 248000, 'instock', 30, 62, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Crucial X10 Pro Portable SSD 4TB',
   'crucial-x10-pro-4tb',
@@ -754,7 +754,7 @@ VALUES (
   385000, 430000, 385000, 'instock', 20, 52, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Seagate IronWolf Pro 12TB NAS HDD',
   'seagate-ironwolf-pro-12tb',
@@ -764,7 +764,7 @@ VALUES (
   385000, 430000, 385000, 'instock', 20, 48, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'WD Red Plus 8TB NAS HDD',
   'wd-red-plus-8tb',
@@ -774,7 +774,7 @@ VALUES (
   248000, 280000, 248000, 'instock', 30, 58, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'ASUS RT-AXE7800 WiFi 6E Tri-Band Router',
   'asus-rt-axe7800',
@@ -784,7 +784,7 @@ VALUES (
   385000, 430000, 385000, 'instock', 12, 48, 4.85, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'TP-Link Archer AX90 AX6600 WiFi 6 Router',
   'tp-link-archer-ax90',
@@ -794,7 +794,7 @@ VALUES (
   298000, 335000, 298000, 'instock', 18, 62, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Netgear Orbi 970 WiFi 7 Mesh System (3-Pack)',
   'netgear-orbi-970-3pack',
@@ -804,7 +804,7 @@ VALUES (
   1450000, 1600000, 1450000, 'instock', 6, 32, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Ubiquiti UniFi Dream Machine Pro Max',
   'ubiquiti-udm-pro-max',
@@ -814,7 +814,7 @@ VALUES (
   685000, 760000, 685000, 'instock', 8, 42, 4.90, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'TP-Link TL-SG3428X 24-Port Gigabit Managed Switch',
   'tp-link-tl-sg3428x',
@@ -824,7 +824,7 @@ VALUES (
   385000, 430000, 385000, 'instock', 12, 38, 4.80, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'Netgear GS324PP 24-Port PoE+ Gigabit Switch',
   'netgear-gs324pp',
@@ -834,7 +834,7 @@ VALUES (
   398000, 445000, 398000, 'instock', 15, 48, 4.75, 'publish'
 ) ON CONFLICT (slug) DO NOTHING;
 
-INSERT INTO softtrova_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
+INSERT INTO digitalCore_products (name, slug, sku, description, short_description, price, regular_price, sale_price, stock_status, stock_quantity, rating_count, average_rating, status)
 VALUES (
   'APC Smart-UPS 1500VA LCD UPS',
   'apc-smart-ups-1500va-lcd',
@@ -847,56 +847,56 @@ VALUES (
 -- ── Product Images ────────────────────────────────────────────
 
 -- Computers & Laptops
-INSERT INTO softtrova_product_images (product_id, src, name, alt, position)
+INSERT INTO digitalCore_product_images (product_id, src, name, alt, position)
 SELECT p.id, 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600', 'ASUS ROG Scar', 'ASUS ROG Strix Scar 18', 0
-FROM softtrova_products p WHERE p.slug = 'asus-rog-strix-scar-18' ON CONFLICT DO NOTHING;
+FROM digitalCore_products p WHERE p.slug = 'asus-rog-strix-scar-18' ON CONFLICT DO NOTHING;
 
-INSERT INTO softtrova_product_images (product_id, src, name, alt, position)
+INSERT INTO digitalCore_product_images (product_id, src, name, alt, position)
 SELECT p.id, 'https://images.unsplash.com/photo-1625336960423-228c02f71e4f?w=600', 'MSI Raider', 'MSI Raider GE78 HX', 0
-FROM softtrova_products p WHERE p.slug = 'msi-raider-ge78-hx' ON CONFLICT DO NOTHING;
+FROM digitalCore_products p WHERE p.slug = 'msi-raider-ge78-hx' ON CONFLICT DO NOTHING;
 
 -- (Continue pattern for all 85 products with appropriate Unsplash images)
 
 -- ── Product ↔ Category Links ──────────────────────────────────
 
 -- Computers & Laptops
-INSERT INTO softtrova_product_categories (product_id, category_id)
-SELECT p.id, c.id FROM softtrova_products p, softtrova_categories c
+INSERT INTO digitalCore_product_categories (product_id, category_id)
+SELECT p.id, c.id FROM digitalCore_products p, digitalCore_categories c
 WHERE p.slug IN ('asus-rog-strix-scar-18','msi-raider-ge78-hx','lenovo-legion-pro-5i-gen9','acer-nitro-16','dell-precision-5680','hp-zbook-fury-16-g10','lenovo-thinkpad-x1-carbon-gen12','asus-zenbook-14-oled','microsoft-surface-laptop-studio-2','nzxt-player-three-streaming','ibuypower-element-mr','corsair-vengeance-i7500','dell-optiplex-7020-tower','apple-mac-mini-m2-pro','hp-aio-27-cr0000','geekom-mini-it13','beelink-ser7')
 AND c.slug = 'computers-laptops'
 ON CONFLICT DO NOTHING;
 
 -- Software & Licenses
-INSERT INTO softtrova_product_categories (product_id, category_id)
-SELECT p.id, c.id FROM softtrova_products p, softtrova_categories c
+INSERT INTO digitalCore_product_categories (product_id, category_id)
+SELECT p.id, c.id FROM digitalCore_products p, digitalCore_categories c
 WHERE p.slug IN ('windows-11-pro-digital','windows-11-home-digital','microsoft-365-personal-12mo','office-2024-home-business','adobe-cc-all-apps-annual','adobe-photoshop-annual','coreldraw-2024-perpetual','affinity-designer-2','norton-360-premium-12mo','kaspersky-total-security-12mo','jetbrains-intellij-ultimate-annual','github-copilot-individual-annual','vmware-workstation-pro-17','acronis-true-image-2024','grammarly-premium-annual','tableau-desktop-professional-annual','autocad-2025-annual')
 AND c.slug = 'software-licenses'
 ON CONFLICT DO NOTHING;
 
 -- PC Components & Hardware
-INSERT INTO softtrova_product_categories (product_id, category_id)
-SELECT p.id, c.id FROM softtrova_products p, softtrova_categories c
+INSERT INTO digitalCore_product_categories (product_id, category_id)
+SELECT p.id, c.id FROM digitalCore_products p, digitalCore_categories c
 WHERE p.slug IN ('intel-core-i9-14900ks','amd-ryzen-9-7950x','intel-core-i5-14600kf','nvidia-rtx-4090-msi-suprim','amd-rx-7900-xt-gigabyte','nvidia-rtx-4060-ti-16gb-asus','msi-mpg-z790-carbon-wifi','asus-rog-strix-x670e-e','corsair-dominator-titanium-64gb','gskill-flare-x5-32gb-6000','be-quiet-dark-rock-elite','nzxt-kraken-elite-360','deepcool-ak620','seasonic-vertex-gx-1000','corsair-hx1500i','thermaltake-toughpower-gf3-850')
 AND c.slug = 'pc-components-hardware'
 ON CONFLICT DO NOTHING;
 
 -- Peripherals & Accessories
-INSERT INTO softtrova_product_categories (product_id, category_id)
-SELECT p.id, c.id FROM softtrova_products p, softtrova_categories c
+INSERT INTO digitalCore_product_categories (product_id, category_id)
+SELECT p.id, c.id FROM digitalCore_products p, digitalCore_categories c
 WHERE p.slug IN ('logitech-g-pro-x-tkl-rapid','keychron-v6-fullsize','corsair-k70-rgb-pro','razer-deathadder-v3-pro','logitech-g502-x-plus','logitech-mx-keys-s-wireless','dell-ultrasharp-u2724de','lg-27gn950-b','samsung-odyssey-neo-g7-32','benq-pd2706ua','steelseries-arctis-nova-7-wireless','razer-kraken-v3-pro-wireless','elgato-stream-deck-plus','razer-kiyo-pro-ultra-webcam','blue-yeti-x-usb-mic','wacom-cintiq-22')
 AND c.slug = 'peripherals-accessories'
 ON CONFLICT DO NOTHING;
 
 -- Networking & Storage
-INSERT INTO softtrova_product_categories (product_id, category_id)
-SELECT p.id, c.id FROM softtrova_products p, softtrova_categories c
+INSERT INTO digitalCore_product_categories (product_id, category_id)
+SELECT p.id, c.id FROM digitalCore_products p, digitalCore_categories c
 WHERE p.slug IN ('samsung-990-evo-plus-2tb','wd-black-sn850x-4tb','crucial-p5-plus-2tb','samsung-870-qvo-4tb','sandisk-extreme-pro-portable-2tb','crucial-x10-pro-4tb','seagate-ironwolf-pro-12tb','wd-red-plus-8tb','asus-rt-axe7800','tp-link-archer-ax90','netgear-orbi-970-3pack','ubiquiti-udm-pro-max','tp-link-tl-sg3428x','netgear-gs324pp','apc-smart-ups-1500va-lcd')
 AND c.slug = 'networking-storage'
 ON CONFLICT DO NOTHING;
 
 -- ── Update category product counts ───────────────────────────
 
-UPDATE softtrova_categories c
+UPDATE digitalCore_categories c
 SET count = (
-  SELECT COUNT(*) FROM softtrova_product_categories pc WHERE pc.category_id = c.id
+  SELECT COUNT(*) FROM digitalCore_product_categories pc WHERE pc.category_id = c.id
 );

@@ -1,11 +1,11 @@
 -- ============================================================
 -- NESTORA E-Commerce PostgreSQL Schema
 -- Replaces WooCommerce as the data source
--- All table names use the "softtrova_" prefix (matches TABLE_PREFIX in .env)
+-- All table names use the "digitalCore_" prefix (matches TABLE_PREFIX in .env)
 -- ============================================================
 
 -- Users / Customers
-CREATE TABLE IF NOT EXISTS softtrova_users (
+CREATE TABLE IF NOT EXISTS digitalCore_users (
   id               SERIAL PRIMARY KEY,
   first_name       VARCHAR(100) NOT NULL DEFAULT '',
   last_name        VARCHAR(100) NOT NULL DEFAULT '',
@@ -29,12 +29,12 @@ CREATE TABLE IF NOT EXISTS softtrova_users (
 );
 
 -- Product Categories
-CREATE TABLE IF NOT EXISTS softtrova_categories (
+CREATE TABLE IF NOT EXISTS digitalCore_categories (
   id          SERIAL PRIMARY KEY,
   name        VARCHAR(255) NOT NULL,
   slug        VARCHAR(255) UNIQUE NOT NULL,
   description TEXT,
-  parent_id   INTEGER REFERENCES softtrova_categories(id) ON DELETE SET NULL,
+  parent_id   INTEGER REFERENCES digitalCore_categories(id) ON DELETE SET NULL,
   image_url   TEXT,
   count       INTEGER NOT NULL DEFAULT 0,
   created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS softtrova_categories (
 );
 
 -- Products
-CREATE TABLE IF NOT EXISTS softtrova_products (
+CREATE TABLE IF NOT EXISTS digitalCore_products (
   id                SERIAL PRIMARY KEY,
   name              VARCHAR(500) NOT NULL,
   slug              VARCHAR(500) UNIQUE NOT NULL,
@@ -63,9 +63,9 @@ CREATE TABLE IF NOT EXISTS softtrova_products (
 );
 
 -- Product Images
-CREATE TABLE IF NOT EXISTS softtrova_product_images (
+CREATE TABLE IF NOT EXISTS digitalCore_product_images (
   id          SERIAL PRIMARY KEY,
-  product_id  INTEGER NOT NULL REFERENCES softtrova_products(id) ON DELETE CASCADE,
+  product_id  INTEGER NOT NULL REFERENCES digitalCore_products(id) ON DELETE CASCADE,
   src         TEXT NOT NULL,
   name        VARCHAR(255),
   alt         TEXT,
@@ -74,25 +74,25 @@ CREATE TABLE IF NOT EXISTS softtrova_product_images (
 );
 
 -- Product ↔ Category (many-to-many)
-CREATE TABLE IF NOT EXISTS softtrova_product_categories (
-  product_id   INTEGER NOT NULL REFERENCES softtrova_products(id) ON DELETE CASCADE,
-  category_id  INTEGER NOT NULL REFERENCES softtrova_categories(id) ON DELETE CASCADE,
+CREATE TABLE IF NOT EXISTS digitalCore_product_categories (
+  product_id   INTEGER NOT NULL REFERENCES digitalCore_products(id) ON DELETE CASCADE,
+  category_id  INTEGER NOT NULL REFERENCES digitalCore_categories(id) ON DELETE CASCADE,
   PRIMARY KEY (product_id, category_id)
 );
 
 -- Product Attributes (e.g. Color, Size, Brand)
-CREATE TABLE IF NOT EXISTS softtrova_product_attributes (
+CREATE TABLE IF NOT EXISTS digitalCore_product_attributes (
   id          SERIAL PRIMARY KEY,
-  product_id  INTEGER NOT NULL REFERENCES softtrova_products(id) ON DELETE CASCADE,
+  product_id  INTEGER NOT NULL REFERENCES digitalCore_products(id) ON DELETE CASCADE,
   name        VARCHAR(255) NOT NULL,
   options     TEXT[] NOT NULL DEFAULT '{}',
   position    INTEGER NOT NULL DEFAULT 0
 );
 
 -- Orders
-CREATE TABLE IF NOT EXISTS softtrova_orders (
+CREATE TABLE IF NOT EXISTS digitalCore_orders (
   id                    SERIAL PRIMARY KEY,
-  customer_id           INTEGER REFERENCES softtrova_users(id) ON DELETE SET NULL,
+  customer_id           INTEGER REFERENCES digitalCore_users(id) ON DELETE SET NULL,
   status                VARCHAR(50) NOT NULL DEFAULT 'pending',
   currency              VARCHAR(10) NOT NULL DEFAULT 'NGN',
   total                 DECIMAL(14,2) NOT NULL DEFAULT 0,
@@ -112,10 +112,10 @@ CREATE TABLE IF NOT EXISTS softtrova_orders (
 );
 
 -- Order Line Items
-CREATE TABLE IF NOT EXISTS softtrova_order_items (
+CREATE TABLE IF NOT EXISTS digitalCore_order_items (
   id          SERIAL PRIMARY KEY,
-  order_id    INTEGER NOT NULL REFERENCES softtrova_orders(id) ON DELETE CASCADE,
-  product_id  INTEGER REFERENCES softtrova_products(id) ON DELETE SET NULL,
+  order_id    INTEGER NOT NULL REFERENCES digitalCore_orders(id) ON DELETE CASCADE,
+  product_id  INTEGER REFERENCES digitalCore_products(id) ON DELETE SET NULL,
   name        VARCHAR(500) NOT NULL,
   quantity    INTEGER NOT NULL DEFAULT 1,
   price       DECIMAL(14,2) NOT NULL,
@@ -125,10 +125,10 @@ CREATE TABLE IF NOT EXISTS softtrova_order_items (
 );
 
 -- Paylater Requests
-CREATE TABLE IF NOT EXISTS softtrova_paylater_requests (
+CREATE TABLE IF NOT EXISTS digitalCore_paylater_requests (
   id          SERIAL PRIMARY KEY,
-  customer_id INTEGER REFERENCES softtrova_users(id) ON DELETE CASCADE,
-  product_id  INTEGER REFERENCES softtrova_products(id) ON DELETE SET NULL,
+  customer_id INTEGER REFERENCES digitalCore_users(id) ON DELETE CASCADE,
+  product_id  INTEGER REFERENCES digitalCore_products(id) ON DELETE SET NULL,
   status      VARCHAR(50) NOT NULL DEFAULT 'pending',
   payment     JSONB NOT NULL DEFAULT '[]',
   created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS softtrova_paylater_requests (
 );
 
 -- Hero / Promotional Banners
-CREATE TABLE IF NOT EXISTS softtrova_banners (
+CREATE TABLE IF NOT EXISTS digitalCore_banners (
   id          SERIAL PRIMARY KEY,
   name        VARCHAR(255),
   image_url   TEXT NOT NULL,
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS softtrova_banners (
 );
 
 -- Global Store Settings (key-value)
-CREATE TABLE IF NOT EXISTS softtrova_global_settings (
+CREATE TABLE IF NOT EXISTS digitalCore_global_settings (
   id          SERIAL PRIMARY KEY,
   key         VARCHAR(255) UNIQUE NOT NULL,
   value       TEXT,
@@ -156,9 +156,9 @@ CREATE TABLE IF NOT EXISTS softtrova_global_settings (
 );
 
 -- Product Reviews
-CREATE TABLE IF NOT EXISTS softtrova_reviews (
+CREATE TABLE IF NOT EXISTS digitalCore_reviews (
   id          SERIAL PRIMARY KEY,
-  product_id  INTEGER NOT NULL REFERENCES softtrova_products(id) ON DELETE CASCADE,
+  product_id  INTEGER NOT NULL REFERENCES digitalCore_products(id) ON DELETE CASCADE,
   reviewer    VARCHAR(255) NOT NULL,
   email       VARCHAR(255),
   rating      INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
@@ -168,20 +168,20 @@ CREATE TABLE IF NOT EXISTS softtrova_reviews (
 );
 
 -- ── Indexes ──────────────────────────────────────────────────
-CREATE INDEX IF NOT EXISTS idx_softtrova_products_status        ON softtrova_products(status);
-CREATE INDEX IF NOT EXISTS idx_softtrova_products_stock_status  ON softtrova_products(stock_status);
-CREATE INDEX IF NOT EXISTS idx_softtrova_product_images_product ON softtrova_product_images(product_id, position);
-CREATE INDEX IF NOT EXISTS idx_softtrova_product_cat_product    ON softtrova_product_categories(product_id);
-CREATE INDEX IF NOT EXISTS idx_softtrova_product_cat_category   ON softtrova_product_categories(category_id);
-CREATE INDEX IF NOT EXISTS idx_softtrova_orders_customer        ON softtrova_orders(customer_id);
-CREATE INDEX IF NOT EXISTS idx_softtrova_orders_status          ON softtrova_orders(status);
-CREATE INDEX IF NOT EXISTS idx_softtrova_order_items_order      ON softtrova_order_items(order_id);
-CREATE INDEX IF NOT EXISTS idx_softtrova_categories_parent      ON softtrova_categories(parent_id);
-CREATE INDEX IF NOT EXISTS idx_softtrova_categories_slug        ON softtrova_categories(slug);
-CREATE INDEX IF NOT EXISTS idx_softtrova_reviews_product        ON softtrova_reviews(product_id);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_products_status        ON digitalCore_products(status);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_products_stock_status  ON digitalCore_products(stock_status);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_product_images_product ON digitalCore_product_images(product_id, position);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_product_cat_product    ON digitalCore_product_categories(product_id);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_product_cat_category   ON digitalCore_product_categories(category_id);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_orders_customer        ON digitalCore_orders(customer_id);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_orders_status          ON digitalCore_orders(status);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_order_items_order      ON digitalCore_order_items(order_id);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_categories_parent      ON digitalCore_categories(parent_id);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_categories_slug        ON digitalCore_categories(slug);
+CREATE INDEX IF NOT EXISTS idx_digitalCore_reviews_product        ON digitalCore_reviews(product_id);
 
 -- ── Default Global Settings ───────────────────────────────────
-INSERT INTO softtrova_global_settings (key, value) VALUES
+INSERT INTO digitalCore_global_settings (key, value) VALUES
   ('shop_name',           'Nestora'),
   ('company_name',        'Nestora Technologies Limited'),
   ('address',             'Nigeria'),
