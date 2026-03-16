@@ -1,13 +1,13 @@
 /**
  * Centralised table-name registry.
  *
- * The prefix is read from the TABLE_PREFIX environment variable (default: "clowstack_").
+ * The prefix is read from the TABLE_PREFIX environment variable (default: "digitalCore_").
  * Set TABLE_PREFIX in your .env file to change it for every table at once.
  *
  * Example .env entry:
- *   TABLE_PREFIX=clowstack_
+ *   TABLE_PREFIX=digitalCore_
  */
-const prefix = process.env.TABLE_PREFIX ?? "clowstack_";
+const prefix = process.env.TABLE_PREFIX ?? "digitalCore_";
 
 export const T = {
 	users: `${prefix}users`,

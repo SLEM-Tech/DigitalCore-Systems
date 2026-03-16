@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-const JWT_SECRET = process.env.JWT_SECRET || "clowstack_super_secret_2024";
+const JWT_SECRET = process.env.JWT_SECRET || "digitalCore_super_secret_2024";
 const JWT_EXPIRES_IN = "7d";
 
 export async function hashPassword(password: string): Promise<string> {
