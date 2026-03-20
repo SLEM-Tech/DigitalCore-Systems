@@ -44,10 +44,10 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 
 # ── AWS S3 ────────────────────────────────────────────────────
-AWS_ACCESS_KEY=your_access_key_id
-AWS_SECRET_KEY=your_secret_access_key
-AWS_REGION=us-east-1
-AWS_BUCKET_NAME=your_bucket_name
+S3_ACCESS_KEY=your_access_key_id
+S3_SECRET_KEY=your_secret_access_key
+S3_REGION=us-east-1
+S3_BUCKET_NAME=your_bucket_name
 
 # ── JWT ───────────────────────────────────────────────────────
 JWT_SECRET=a_long_random_secret_string
