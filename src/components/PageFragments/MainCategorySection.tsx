@@ -55,7 +55,7 @@ const MainCategorySection = () => {
 
 	return (
 		<section
-			className={`flex w-full flex-col items-center gap-3 sm:gap-4 mb-12 pb-8`}
+			className={`flex w-full flex-col items-center gap-3 sm:gap-4 mb-12 pb-8 lg:col-span-7`}
 		>
 			{CategoryProducts && (
 				<>
